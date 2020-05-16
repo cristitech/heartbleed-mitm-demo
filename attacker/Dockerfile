@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 	traceroute dnsutils tcpdump \
 	vim wget iptables mitmproxy
 
-CMD ["sysctl -w net.ipv4.ip_forward=1"]
+CMD ["echo 1 > /proc/sys/net/ipv4/ip_forward"]
 CMD ["/bin/bash"]
 
  
